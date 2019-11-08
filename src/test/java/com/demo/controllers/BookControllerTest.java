@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-//Step x. Add tests extending Deployments
+//Step 4. Better approach, add tests extending Deployments
 @RunWith(Arquillian.class)
 @ReuseDeployment(Deployments.class)
 public class BookControllerTest extends Deployments {

@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply from: 'tests.gradle'
+
+war
+        {
+            archiveFileName  = 'Application.war'
+        }
+
+group 'testing-micro'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile group: 'javax', name: 'javaee-api', version:'8.0'
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    // created by default by intelliJ, add if needed
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // Step 1.1 Arquillian integration, add gradle/maven dependency
+    testCompile group: 'org.jboss.arquillian.junit', name: 'arquillian-junit-container', version: '1.5.0.Final'
+    // Step 1.2 Arquillian integration, needed to use a embedded payara
+    testCompile group: 'fish.payara.arquillian', name: 'arquillian-payara-server-4-embedded', version: '1.1'
+    testCompile group: 'fish.payara.extras', name: 'payara-embedded-web', version: '5.193.1'
+
+}

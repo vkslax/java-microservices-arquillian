@@ -4,7 +4,6 @@ import lombok.NoArgsConstructor;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 
 import javax.ws.rs.client.ClientBuilder;
@@ -12,7 +11,6 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
-import org.glassfish.jersey.client.ClientConfig;
 import org.junit.Before;
 
 import javax.ws.rs.client.Client;
@@ -41,8 +39,6 @@ public class Deployments {
     @Before
     public void setUpClass() throws MalformedURLException
     {
-        //ClientConfig config = new ClientConfig();
-        //config.register(ErrorFilter.class);
         Client client = ClientBuilder.newClient();
         API = client.target(URI.create(new URL(base, "api").toExternalForm()));
     }

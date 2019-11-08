@@ -9,3 +9,6 @@ To run test just type in terminal
  gradlew test
 ```
 more configuration can be made to use testing IDE tools, this configuration depends on IDE.
+
+
+[Presentation Slides on Google Slides here](https://docs.google.com/presentation/d/1JjU6QZVnNIOX4Sqaksf9IfGmopKkSgW-6jRB3F3IVAE/edit?usp=sharing) 

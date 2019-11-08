@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @Data
 public class Book {
-    private Long id;
+    private Integer id;
 
     private String name;
 
