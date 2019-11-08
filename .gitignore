@@ -1,0 +1,8 @@
+/gradle.properties
+/.idea
+/build
+/.gradle
+/lib/*
+/out
+/*.iml
+/build.gradle
